@@ -1,0 +1,69 @@
+
+{
+   "seat":[
+      {
+         "description":"2",
+         "currency":"INR",
+         "origin":"VNS",
+         "code":"NoSeat",
+         "seatWayType":"1",
+         "flightNumber":"2105",
+         "destination":"DEL",
+         "price":0,
+         "seatType":"0",
+         "availablityType":"0",
+         "airlineCode":"6E",
+         "rowNo":"0",
+         "deck":"0",
+         "craftType":"A320-180",
+         "seatNo":null,
+         "compartment":"0"
+      }
+   ]
+}
+
+
+
+<span className="l__arrow arrow"  onClick={() =>{
+                        arrow === 0?
+                        setArrow(dataLength - 1)
+                        :setArrow((prev)=> prev - 1); 
+                    }}>
+          <IconButton>
+            <AiOutlineLeft/>
+          </IconButton>
+          </span>
+          
+            <div className='slider__div'>
+
+                  {
+                    // for(let i = 0; i < dataLength; i++) {
+                      
+                    // }
+                    // dataLength.forEach(element => {
+                      // })
+                    }
+                 <Seats data={SeatsMealBagData.onwardResp[0].additionalServices.seatMapping} /> 
+                 <Seats data={SeatsMealBagData.onwardResp[0].additionalServices.seatMapping} /> 
+
+            </div>
+
+
+          <span className="r__arrow arrow"
+           onClick={() =>{
+            arrow === dataLength - 1?
+            setArrow(0)
+            :setArrow((prev)=> prev + 1); 
+        }}
+          
+          >
+          <IconButton>
+              
+            <AiOutlineRight />
+          </IconButton>
+          </span>
+
+
+
+
+          
