@@ -297,12 +297,12 @@ ol {
 
 /* seat info */
 .seat-info {
-  width: 10rem;
+  width: 9rem;
   text-align: center;
   /* background: rgba(0, 0, 0, 0.311); */
   padding: 1rem;
   position: absolute;
-  bottom: 40%;
+  bottom: 20%;
   left: 10%;
   box-shadow: 0 0 3px #000;
   border-radius: 6px;

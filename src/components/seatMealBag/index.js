@@ -17,11 +17,9 @@ import Seats from './seats/Seats'
 import Baggage from './baggage/Baggage';
 import Meal from './meal/Meal';
 import SeatsMealBagData from './data/seat-meal-baggage-with-meal.json'
-import { AiOutlineLeft } from 'react-icons/ai'
-import { AiOutlineRight } from 'react-icons/ai'
-import IconButton from '@material-ui/core/IconButton';
 import Carousel from 'react-elastic-carousel'
 // import Carousel from 'react-elastic-carousel'
+import {BsArrowRight} from 'react-icons/bs'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -60,20 +58,24 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
-
-    // "& .slider__container": {
-    //   width: '100%',
-    //   // height: '100vh',
-    //   // flexDirection: 'column',
-    // },
-    // " &.sliders": {
-    //   display: "flex",
-    // }
     "& .arrive": {
-      marginLeft: '6%',
+      margin:'0',
+      marginLeft: '0%',
       marginTop: '3%',
-      position: 'relative',
-
+      display:'inline-block',
+      position:'relative',
+      borderLeft:'6px solid green',
+      paddingLeft: '6px',
+      // lineHeight:'1.1',
+      // position: 'absolute',
+      // zIndex:'111',
+    },
+    "& .arrive span": {
+      display:'inline-block',
+      margin:'0 3px'
+    },
+    "& .slider__item":{
+      width:'100%'
     }
 
   },
@@ -103,10 +105,6 @@ export default function SeatMealBag() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
-
-  // console.log(dataLength,"accc")
-
 
   return (
     <div className={classes.root}>
@@ -139,7 +137,7 @@ export default function SeatMealBag() {
                   {
                     SeatsMealBagData.onwardResp[0].segment.map((elm, idx) => (
                       <div className='slider__item' key={idx}>
-                        <h3 className='arrive'><span> {elm.departDetails.airportName}</span> -> <span> {elm.arriveDetails.airportName}</span>  </h3>
+                        <h3 className='arrive'>{elm.departDetails.airportName} <span><BsArrowRight/></span> {elm.arriveDetails.airportName}</h3>
                         <Seats data={SeatsMealBagData.onwardResp[0].additionalServices.seatMapping} key={idx} />
                       </div>
                     ))
@@ -165,6 +163,7 @@ export default function SeatMealBag() {
                   {
                     SeatsMealBagData.onwardResp[0].segment.map((elm, idx) => (
                       <div className='slider__item' key={idx}>
+                         <h3 className='arrive'>{elm.departDetails.airportName} <span><BsArrowRight/></span> {elm.arriveDetails.airportName}</h3>
                         <Meal data={SeatsMealBagData.onwardResp[0].additionalServices.meal}/>
                       </div>
                     ))
@@ -181,7 +180,3 @@ export default function SeatMealBag() {
     </div>
   );
 }
-
-
-
-{/* <Seats data={SeatsMealBagData.onwardResp[0].additionalServices.seatMapping} /> */ }

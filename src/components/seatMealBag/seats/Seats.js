@@ -27,6 +27,16 @@ const Seats = ({ data }) => {
                                         }
                                     </ol>
                                 </li>
+                                // item.map((seat, index) =>(
+                                //     switch (seat.rowNo) {
+                                //         case 1:
+                                            
+                                //             break;
+                                    
+                                //         default:
+                                //             break;
+                                //     }
+                                // ))
                         ))
                     }
 

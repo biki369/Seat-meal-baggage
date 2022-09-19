@@ -24,17 +24,17 @@ const useStyles = makeStyles({
 
     },
 
-    "& ::-webkit-scrollbar-track": {
+    "& .meal__container::-webkit-scrollbar-track": {
       width: "6px",
     },
-    "& ::-webkit-scrollbar": {
+    "& .meal__container::-webkit-scrollbar": {
       background: '#f1f1f1',
     },
-    "& ::-webkit-scrollbar-thumb": {
+    "& .meal__container::-webkit-scrollbar-thumb": {
       background: '#888',
       borderRadius: '30px',
     },
-    "& ::-webkit-scrollbar-thumb:hover ": {
+    "& .meal__container::-webkit-scrollbar-thumb:hover ": {
       background: '#1d1d1d',
     }
 
