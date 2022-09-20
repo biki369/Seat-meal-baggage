@@ -88,19 +88,7 @@
          
          "additionalServices":{
             "meal":[
-               {
-                  "description":"2",
-                  "currency":"INR",
-                  "origin":"BOM",
-                  "code":"NoMeal",
-                  "wayType":"2",
-                  "flightNumber":"6784",
-                  "destination":"DEL",
-                  "price":"0",
-                  "quantity":"0",
-                  "airlineDescription":" no meal",
-                  "airlineCode":"6E"
-               },
+             
                {
                   "description":"2",
                   "currency":"INR",

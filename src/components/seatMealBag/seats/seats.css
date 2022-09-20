@@ -1,8 +1,12 @@
 .plane-container {
-  width: 66vw;
+  min-width: 100%;
   padding: 1rem;
   position: relative;
   /* height: 90vh; */
+}
+
+@media screen {
+  
 }
 
 

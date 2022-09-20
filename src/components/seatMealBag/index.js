@@ -72,7 +72,11 @@ const useStyles = makeStyles((theme) => ({
     },
     "& .arrive span": {
       display:'inline-block',
-      margin:'0 3px'
+      margin:'0 3px',
+      // display: 'flex',
+      // justifyContent: 'center',
+      // flexDirection:'column',
+      // alignItems: "center",
     },
     "& .slider__item":{
       width:'100%'
